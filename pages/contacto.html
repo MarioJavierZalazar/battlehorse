@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/Caballo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- css responsive -->
+    <link rel="stylesheet" href="../css/grid.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <div class="contenedor">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img class="logoImg" src="../img/logo-name.png" alt="Logo">
+            </div>
+            <!-- menu -->
+            <nav class="nav">
+                <a href="../index.html">Inicio</a>
+                <a href="./wargames.html">Wargames</a>
+                <a href="./tutoriales.html">Tutoriales</a>
+                <a href="./dondeJugar.html">Donde Jugar</a>
+                <a class="active" href="./contacto.html">Contacto</a>
+            </nav>
+        </header>
+        <!-- Contenido Principal -->
+        <main class="main">
+            <div class="intro">
+                <h1 class="title">Contacto</h1>
+                <p>Cualquier duda o consulta sobre algun juego, o si quieres compartir tus conocimiento de artista con un tutorial, puedes contactarnos utilizando el siguiente formulario.</p>
+
+                <p>En caso de compartir un vídeo o fotos, favor de indicar en el mensaje la URL en donde esta alojado dicho archivo multimedia</p>
+
+            </div>
+            <!-- Formulario de contacto - se aplica css grid -->
+            <div class="formularioContacto">
+                <form action="#" method="POST" id="formContacto">
+                    <input type="text" name="nombre" placeholder="Nombre">
+                    <input type="email" name="email" placeholder="Email">
+                
+                    <div class="asunto">
+                        <label for="motivo">Seleccionar el motivo de contacto:</label>
+                        <select name="motivo" id="motivo">
+                            <option value="consulta">Consulta</option>
+                            <option value="tutorial">Tutorial</option>
+                        </select>
+                    </div>                
+                    <textarea name="descripcion" id="descripcion" cols="50" rows="10" placeholder="Mensaje"></textarea>
+                    <div class="newsletter">
+                        <label for="newsletter">¿Deseas aderirte a nuestra newsletter?</label>
+                        <input type="checkbox" name="newsletter" id="newsletter" value="true">
+                    </div>
+                    <div class="btns">
+                        <input class="btn delete" type="reset" value="Limpiar todos los campos">
+                        <input class="btn send" type="submit" value="Enviar">
+                    </div>
+                </form>
+            </div>
+
+        </main>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="copyright">
+                <p>copyright © Mario Zalazar - 2021</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
