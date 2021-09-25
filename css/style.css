@@ -264,6 +264,7 @@ textarea {
     border-radius: 25px;
     padding: 10px;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .delete {
