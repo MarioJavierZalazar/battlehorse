@@ -62,6 +62,12 @@ grid-column-end: -1;
 
 @media screen and (max-width:400px) {
 
+
+    /* sacamos el fixed del menu */
+    .header {
+        position: static;
+    }
+
     /* Hacemos el menu en forma de lista */
     .header .nav a {
         display: block;
