@@ -45,6 +45,8 @@ body {
 }
 
 /* MAIN */
+
+
 .titulo {
     color:var(--rojo);
     text-transform: uppercase;
