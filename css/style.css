@@ -1,4 +1,9 @@
 /* General */
+:root {
+    --rojo: #8b0000; 
+    --negro: #232323;
+    --blanco: #f2f2f2;
+}
 * {
     padding: 0;
     margin: 0;
@@ -6,294 +11,69 @@
 }
 
 body {
-    background-color: #f2f2f2;
+    background-color: var(--blanco);
     font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    color: #232323;
-    line-height: 1.6;
+    color: var(--negro);
 }
 
-/* Estructuras */
-
-/* Header */
+/* HEADER */
 .header {
-    background-color: #f2f2f2;
-    width: 100%;
     border-bottom: 1px solid #8b0000;
-    margin-bottom: 10px;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
 }
 
-.header .logo {
+.navbar-brand {
     height: 100px;
-    display: inline-block;
 }
 
-.header .logo .logoImg {
-    height: 100%;
+.logoImg{
+    height: 100%
 }
 
-/* Menu */
-.header .nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.header .nav a {
-    text-decoration: none;
+.navbar-light .navbar-nav .nav-link  {
+    color: var(--rojo);
     text-transform: uppercase;
-    display: inline-block;
-    margin: 5px;
-    padding: 10px;
 }
 
-.header .nav .active {
-    background-color: #8b0000;
-    color: #fff;
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:hover {
+    background-color:  var(--rojo); 
+    color: var(--blanco);
 }
 
-.header .nav a:hover {
-    background-color: #8b0000;
-    color: #fff;
+.navbar-light .navbar-nav .nav-link:hover {
     transition: all 0.3s ease-in-out;
 }
 
-/* Main */
-.main {
-    margin-bottom: 30px;
-}
-
-.title {
-    color: #8b0000;
+/* MAIN */
+.titulo {
+    color:var(--rojo);
     text-transform: uppercase;
-    text-align: center;
+}
+.subtitulo{
+    color:var(--rojo);
 }
 
-.subtitle {
-    color: #8b0000;
-    margin-top: 30px;
-}
-
-.intro {
-    border-bottom: 1px solid #8b0000;
-    padding-bottom: 20px;
-    margin-bottom: 40px;
-}
-
-.text a {
+.texto a {
     color: #8b0000;
     text-decoration: none;
     text-transform: uppercase;
 }
 
-/* Footer */
+.intro{
+    border-bottom: 1px solid #8b0000;
+}
 
+
+/* FOOTER */
 .footer {
-    background-color: #232323;
-    color: #f2f2f2;
-    font-size: 0.7rem;
+    background-color: var(--negro);
+    color: var(--blanco);
     text-align: center;
-    padding: 5px;
+    font-size: 0.75rem;
+    padding: 5px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
 
-
-/* Secciones */
-
-/* index */
-.main .heroImg {
-    max-width: 80%;
-    margin: auto;
-}
-
-.main .heroImg .heroImg__img {
-    width: 100%;
-}
-
-
-/* Wargames */
-
-.articulo {
-    margin-bottom: 20px;
-}
-
-.galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-.galeria .imgGaleria {
-    display: inline-block;
-    max-width: 33%;
-    padding: 5px;
-}
-/* Se crea animacion para la galeria zoom */
-.galeria .imgGaleria:hover {
-    animation-name: un_efecto;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
-}
-
-@keyframes un_efecto {
-    0%{ transform: scale(1, 1);}
-    25%{ transform: scale(1.1, 1.1) }
-    50%{ transform: scale(1.2, 1.2) }
-    75%{ transform: scale(1.1, 1.1)}
-    100%{ transform: scale(1, 1)}
- }
-
-.galeria .imgGaleria img {
-    width: 100%;
-    vertical-align: top;
-    border-radius: 10px;
-}
-
-/* Tutorial */
-.tutorial {
-    border-bottom: 1px solid #8b0000;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.tutorialVideo,
-.tutorialContenido {
-    padding: 5px;
-    margin: 5px 10px;
-}
-
-/* Donde juegar */
-
-.club {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, auto);
-    gap: 10px 20px;
-    padding: 10px;
-    margin-bottom: 50px;
-    /* Modo card */
-    /* background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: 5px 5px 20px 10px #888888; */
-}
-
-.logoClub {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    justify-self: center;
-}
-
-.descripcionClub {
-    grid-column-start: 2;
-    grid-column-end: -1;
-    grid-row-start: 1;
-    grid-row-end: -1;
-}
-
-.logoClub img {
-    width: 100%;
-    max-width: 200px;
-    border-radius: 100%;
-}
-
-
-
-/* Contacto */
-
-/* Formulario con css grid */
-#formContacto{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5,auto);
-}
-
-input[type="text"] {grid-column-start: 1; grid-column-end: 2;}
-input[type="email"] {grid-column-start: 3; grid-column-end: 4;}
-.asunto{grid-column-start: 1; grid-column-end: 3;}
-.newsletter {grid-column-start: 1; grid-column-end: 3;}
-
-
-input[type="text"],
-input[type="email"] {
-	border: 2px solid #cecece;
-	border-radius: 5px;
-	padding: 15px 20px;
-	color: #a4a4a4;
-    width: 100%;
-	margin-bottom: 15px;
-}
-
-.asunto,
-.newsletter {
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-.asunto select {
-    margin-left: 5px;
-    border: 2px solid #cecece;
-    border-radius: 5px;
-    color: #a4a4a4;
-}
-
-
-textarea {
-    width: 100%;
-    border: 2px solid #cecece;
-    border-radius: 5px;
-    color: #a4a4a4;
-    padding: 15px 20px;
-	margin-bottom: 15px;
-	height: 200px;
-	resize: none;
-    grid-column-start: 1; grid-column-end: -1;
-}
-
-.btns{
-    display: flex;
-    justify-content: space-around;
-    grid-column-start: 1; grid-column-end: -1;
-}
-
-.btn {
-    width: 35%;
-    border-radius: 25px;
-    padding: 10px;
-    margin-bottom: 20px;
-    cursor: pointer;
-}
-
-.delete {
-    background-color: rgba(139, 0, 0, 1);
-    color: #f2f2f2;
-    border: none;
-    font-weight: 700;
-}
-
-.delete:hover{
-    background-color: rgba(139, 0, 0, 0.8);
-}
-
-.send {
-    background: rgba(0, 100, 0, 1);
-    color: #f2f2f2;
-    border: none;
-    font-weight: 700;
-}
-
-.send:hover {
-    background: rgba(0, 100, 0, 0.8)
-}
-
+.footer .container p {margin-bottom: 0;}
