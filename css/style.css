@@ -17,7 +17,9 @@ body {
 }
 
 /* HEADER */
-.header {
+.header,
+.intro,
+.articulo {
     border-bottom: 1px solid #8b0000;
 }
 
@@ -46,24 +48,19 @@ body {
 }
 
 /* MAIN */
-
-
-.titulo {
+.titulo,
+.subtitulo {
     color:var(--rojo);
+    font-weight: 700;
+    
+}
+.titulo{
     text-transform: uppercase;
 }
-.subtitulo{
-    color:var(--rojo);
-}
-
 .texto a {
     color: #8b0000;
     text-decoration: none;
     text-transform: uppercase;
-}
-
-.intro{
-    border-bottom: 1px solid #8b0000;
 }
 
 
