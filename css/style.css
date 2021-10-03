@@ -63,10 +63,18 @@ body {
     text-transform: uppercase;
 }
 
+/* Tutorial */
 .tutorial {
     border-bottom: 1px solid var(--rojo);
     padding: 10px;
     margin-bottom: 50px;
+}
+
+/* Donde jugar */
+.logoClub img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 100%;
 }
 
 
