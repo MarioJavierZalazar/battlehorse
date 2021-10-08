@@ -31,10 +31,11 @@ body {
     height: 100%
 }
 
-.navbar-light .navbar-nav .nav-link  {
+.navbar-light .navbar-nav .nav-link {
     color: var(--rojo);
     text-transform: uppercase;
     padding: 10px;
+
 }
 
 .navbar-light .navbar-nav .nav-link.active,
@@ -96,3 +97,11 @@ textarea {
 }
 
 .footer .container p {margin-bottom: 0;}
+
+.menuHamburgesa {
+    color: var(--rojo);
+}
+
+.navbar-light .navbar-toggler{
+    border-color: rgba(0, 0, 0, 0)
+}
