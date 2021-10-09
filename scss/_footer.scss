@@ -1,0 +1,17 @@
+/* FOOTER */
+.footer {
+    background-color: $negro;
+    color: $blanco;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 5px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    .container {
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

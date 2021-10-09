@@ -17,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/MarioJavierZalazar/battlehorse/issues"
   },
-  "homepage": "https://github.com/MarioJavierZalazar/battlehorse#readme"
+  "homepage": "https://github.com/MarioJavierZalazar/battlehorse#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  },
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.13"
+  }
 }

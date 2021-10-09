@@ -1,0 +1,39 @@
+/* MAIN */
+.titulo,
+.subtitulo {
+    color:$rojo;
+    font-weight: 700;
+    
+}
+.titulo{
+    text-transform: uppercase;
+}
+.texto {
+    a {
+        color: #8b0000;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
+
+/* Tutorial */
+.tutorial {
+    border-bottom: $border;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+/* Donde jugar */
+.logoClub{
+    img {
+        width: 100%;
+        max-width: 200px;
+        border-radius: 100%;
+    } 
+}
+
+/* Contacto */
+
+textarea {
+    resize: none;
+}
