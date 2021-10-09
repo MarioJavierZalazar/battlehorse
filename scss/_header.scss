@@ -1,5 +1,5 @@
 /* HEADER */
-@mixin animate($animation,$duration,$method,){
+@mixin logoShake($animation,$duration,$method,){
     animation: $animation $duration $method;
 }
 
@@ -36,7 +36,7 @@
             90% { transform: translate(1px, 2px) rotate(0deg); }
             100% { transform: translate(1px, -2px) rotate(-1deg); }
           }
-          @include animate(shake, 0.5s,infinite)
+          @include logoShake(shake, 0.5s,infinite)
     }
 }
 
