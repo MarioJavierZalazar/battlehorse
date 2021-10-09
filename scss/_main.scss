@@ -16,6 +16,17 @@
     }
 }
 
+/* Wargames */
+.box {
+    width: $widthStandard / 3;
+    padding: 10px;
+    img {
+        border-radius: 100%;
+        max-width: 100%;
+    }
+}
+
+
 /* Tutorial */
 .tutorial {
     border-bottom: $border;

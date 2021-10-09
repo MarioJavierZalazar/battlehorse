@@ -83,6 +83,14 @@ body {
   text-decoration: none;
   text-transform: uppercase; }
 
+/* Wargames */
+.box {
+  width: 333.33333px;
+  padding: 10px; }
+  .box img {
+    border-radius: 100%;
+    max-width: 100%; }
+
 /* Tutorial */
 .tutorial {
   border-bottom: 1px solid #8b0000;
