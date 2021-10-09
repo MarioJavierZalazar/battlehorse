@@ -35,7 +35,6 @@ body {
     color: var(--rojo);
     text-transform: uppercase;
     padding: 10px;
-
 }
 
 .navbar-light .navbar-nav .nav-link.active,
@@ -46,6 +45,16 @@ body {
 
 .navbar-light .navbar-nav .nav-link:hover {
     transition: all 0.3s ease-in-out;
+}
+
+/* Cambiando el boton hamburgesa */
+
+.menuHamburgesa {
+    color: var(--rojo);
+}
+
+.navbar-light .navbar-toggler{
+    border-color: rgba(0, 0, 0, 0)
 }
 
 /* MAIN */
@@ -98,10 +107,3 @@ textarea {
 
 .footer .container p {margin-bottom: 0;}
 
-.menuHamburgesa {
-    color: var(--rojo);
-}
-
-.navbar-light .navbar-toggler{
-    border-color: rgba(0, 0, 0, 0)
-}

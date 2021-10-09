@@ -1,2 +1,88 @@
+/* General */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
 body {
-  background-color: green; }
+  background-color: #f2f2f2;
+  font-family: 'Lato', sans-serif;
+  color: #232323; }
+
+/* HEADER */
+.header,
+.intro,
+.articulo {
+  border-bottom: 1px solid #8b0000; }
+
+.navbar-brand {
+  height: 100px; }
+
+.logoImg {
+  height: 100%; }
+
+.navbar-light .navbar-nav .nav-link {
+  color: #8b0000;
+  text-transform: uppercase;
+  padding: 10px; }
+
+.navbar-light .navbar-nav .nav-link.active {
+  background-color: #8b0000;
+  color: #f2f2f2; }
+
+.navbar-light .navbar-nav .nav-link:hover {
+  background-color: #8b0000;
+  color: #f2f2f2; }
+
+.navbar-light .navbar-nav .nav-link:hover {
+  transition: all 0.3s ease-in-out; }
+
+/* Cambiando el boton hamburgesa */
+.menuHamburgesa {
+  color: #8b0000; }
+
+.navbar-light .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0); }
+
+/* MAIN */
+.titulo,
+.subtitulo {
+  color: #8b0000;
+  font-weight: 700; }
+
+.titulo {
+  text-transform: uppercase; }
+
+.texto a {
+  color: #8b0000;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+/* Tutorial */
+.tutorial {
+  border-bottom: 1px solid #8b0000;
+  padding: 10px;
+  margin-bottom: 50px; }
+
+/* Donde jugar */
+.logoClub img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 100%; }
+
+/* Contacto */
+textarea {
+  resize: none; }
+
+/* FOOTER */
+.footer {
+  background-color: #232323;
+  color: #f2f2f2;
+  text-align: center;
+  font-size: 0.75rem;
+  padding: 5px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%; }
+  .footer .container p {
+    margin-bottom: 0; }
