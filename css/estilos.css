@@ -1,18 +1,16 @@
-/* General */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box; }
 
+/* General */
 body {
   background-color: #f2f2f2;
   font-family: 'Lato', sans-serif;
   color: #232323; }
 
 /* HEADER */
-.header,
-.intro,
-.articulo {
+.header {
   border-bottom: 1px solid #8b0000; }
 
 .navbar-brand {
@@ -47,29 +45,30 @@ body {
   100% {
     transform: translate(1px, -2px) rotate(-1deg); } }
 
+.navbar-light .navbar-nav .nav-link.active {
+  background-color: #8b0000;
+  color: #f2f2f2; }
+
 .navbar-light .navbar-nav .nav-link {
   color: #8b0000;
   text-transform: uppercase;
   padding: 10px; }
   .navbar-light .navbar-nav .nav-link:hover {
+    background-color: #8b0000;
+    color: #f2f2f2;
     transition: all 0.3s ease-in-out; }
 
-.navbar-light .navbar-nav .nav-link.active {
-  background-color: #8b0000;
-  color: #f2f2f2; }
-
-.navbar-light .navbar-nav .nav-link:hover {
-  background-color: #8b0000;
-  color: #f2f2f2; }
-
 /* Cambiando el boton hamburgesa */
-.menuHamburgesa {
-  color: #8b0000; }
-
 .navbar-light .navbar-toggler {
   border-color: rgba(0, 0, 0, 0); }
+  .navbar-light .navbar-toggler .menuHamburgesa {
+    color: #8b0000; }
 
 /* MAIN */
+.intro,
+.articulo {
+  border-bottom: 1px solid #8b0000; }
+
 .titulo,
 .subtitulo {
   color: #8b0000;
@@ -83,7 +82,7 @@ body {
   text-decoration: none;
   text-transform: uppercase; }
 
-/* Wargames */
+/* Inicio */
 .box {
   width: 333.33333px;
   padding: 10px; }

@@ -10,9 +10,7 @@
 }
 
 
-.header,
-.intro,
-.articulo {
+.header {
     border-bottom: $border;
 }
 
@@ -42,27 +40,18 @@
 
 .navbar-light {
     .navbar-nav {
-        .nav-link {
-            color: $rojo;
-            text-transform: uppercase;
-            padding: 10px;
-            &:hover {
-                transition: all 0.3s ease-in-out;
-            }
-        }
-    }
-}
-
-.navbar-light {
-    .navbar-nav {
         .nav-link.active{
             background-color:  $rojo; 
             color: $blanco;
         }
         .nav-link{
+            color: $rojo;
+            text-transform: uppercase;
+            padding: 10px;
             &:hover {
                 background-color:  $rojo; 
                 color: $blanco;
+                transition: all 0.3s ease-in-out;
             }
         }
     }
@@ -70,13 +59,12 @@
 
 /* Cambiando el boton hamburgesa */
 
-.menuHamburgesa {
-    color: $rojo;
-}
-
 .navbar-light {
     .navbar-toggler{
-        border-color: rgba(0, 0, 0, 0)
+        border-color: rgba(0, 0, 0, 0);
+        .menuHamburgesa {
+            color: $rojo;
+        }
     }
 }
 

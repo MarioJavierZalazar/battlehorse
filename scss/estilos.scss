@@ -1,5 +1,6 @@
-@import "variables";
-@import "base";
-@import "header";
-@import "main";
-@import "footer";
+@import "./utilities/variables";
+@import "./base/reset";
+@import "./base/base";
+@import "./layout/header";
+@import "./layout/main";
+@import "./layout/footer";
