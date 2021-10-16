@@ -49,8 +49,7 @@
             text-transform: uppercase;
             padding: 10px;
             &:hover {
-                background-color:  $rojo; 
-                color: $blanco;
+                @extend .nav-link.active;
                 transition: all 0.3s ease-in-out;
             }
         }
