@@ -69,8 +69,7 @@ body {
 .articulo {
   border-bottom: 1px solid #8b0000; }
 
-.titulo,
-.subtitulo {
+.subtitulo, .titulo {
   color: #8b0000;
   font-weight: 700; }
 

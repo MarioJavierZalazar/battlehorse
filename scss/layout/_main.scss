@@ -5,7 +5,6 @@
     border-bottom: $border;
 }
 
-.titulo,
 .subtitulo {
     color:$rojo;
     font-weight: 700;
@@ -13,6 +12,7 @@
 }
 .titulo{
     text-transform: uppercase;
+    @extend .subtitulo;
 }
 
 .texto {
