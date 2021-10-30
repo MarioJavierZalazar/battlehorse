@@ -60,12 +60,37 @@
         </div>
         <div class="productos container-fluid mt-5">
             <div class="row">
-                <aside class="filtros col-3">
+                <aside class="filtros col-12 col-md-3">
                     <div class="filtrosContainer">
                         <h3 class="text-center mt-5">Filtros</h3>
                         <nav class="nav flex-column">
-                            <button class="btn btn-primary my-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">Marca</button>
-                            <div class="collapse" id="collapseExample1">
+                            <button class="btn boton my-3" type="button" data-bs-toggle="collapse" data-bs-target="#filtro-orden" aria-expanded="false" aria-controls="filtro-orden">Ordenar por:</button>
+                            <div class="collapse" id="filtro-orden">
+                                <div class="card card-body">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item my-2">
+                                            <label>
+                                                <input class="mx-1" type="radio" name="filtro-orden" id="orden-mayor">
+                                                <span>Precio: Mayor a Menor</span>
+                                            </label>
+                                        </li>
+                                        <li class="nav-item my-2">
+                                            <label>
+                                                <input class="mx-1" type="radio" name="filtro-orden" id="orden-menor">
+                                                <span>Precio: Menor a Mayor</span>
+                                            </label>
+                                        </li>
+                                        <li class="nav-item my-2">
+                                            <label>
+                                                <input class="mx-1" type="radio" name="filtro-orden" id="orden-nombre">
+                                                <span>Nombre: A - Z</span>
+                                            </label>
+                                        </li>
+                                    </ul>  
+                                </div>
+                            </div>
+                            <button class="btn boton my-3" type="button" data-bs-toggle="collapse" data-bs-target="#filtro-marca" aria-expanded="false" aria-controls="filtro-marca">Marca</button>
+                            <div class="collapse" id="filtro-marca">
                                 <div class="card card-body">
                                     <ul class="nav flex-column">
                                         <li class="nav-item my-2">
@@ -89,8 +114,8 @@
                                     </ul>  
                                 </div>
                             </div>
-                            <button class="btn btn-primary my-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">Tipo</button>
-                            <div class="collapse" id="collapseExample2">
+                            <button class="btn boton my-3" type="button" data-bs-toggle="collapse" data-bs-target="#filtro-tipo" aria-expanded="false" aria-controls="filtro-tipo">Tipo</button>
+                            <div class="collapse" id="filtro-tipo">
                                 <div class="card card-body">
                                     <ul class="nav flex-column">
                                         <li class="nav-item my-2">
@@ -114,8 +139,8 @@
                                     </ul>  
                                 </div>
                             </div>
-                            <button class="btn btn-primary my-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">Rango de precio</button>
-                            <div class="collapse" id="collapseExample3">
+                            <button class="btn boton my-3" type="button" data-bs-toggle="collapse" data-bs-target="#filtro-precio" aria-expanded="false" aria-controls="filtro-precio">Rango de precio</button>
+                            <div class="collapse" id="filtro-precio">
                                 <div class="card card-body">
                                     <ul class="nav flex-column">
                                         <li class="nav-item my-2">
@@ -142,14 +167,14 @@
                         </nav>
                     </div>
                 </aside>
-                <div class="listaProductos col-9">
+                <div class="listaProductos col-12 col-md-9">
                     <div class="row d-flex justify-content-around">
                         <div class="card col-4 m-3" style="width: 18rem;">
                             <img src="../img/tinda/sovieticosStarted2.jpg" class="card-img-top img-fluid" loading="lazy" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                              <button type="button" class="btn boton">Añadir al carrito</button>
                             </div>
                         </div>
                         <div class="card col-4 m-3" style="width: 18rem;">
@@ -157,7 +182,7 @@
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                              <button type="button" class="btn boton">Añadir al carrito</button>
                             </div>
                         </div>
                         <div class="card col-4 m-3" style="width: 18rem;">
@@ -165,7 +190,7 @@
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                              <button type="button" class="btn boton">Añadir al carrito</button>
                             </div>
                         </div>
                         <div class="card col-4 m-3" style="width: 18rem;">
@@ -173,7 +198,7 @@
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                              <button type="button" class="btn boton">Añadir al carrito</button>
                             </div>
                         </div>
                         <div class="card col-4 m-3" style="width: 18rem;">
@@ -181,7 +206,7 @@
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                              <button type="button" class="btn boton">Añadir al carrito</button>
                             </div>
                         </div>
                         <div class="card col-4 m-3" style="width: 18rem;">
@@ -189,31 +214,7 @@
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <button type="button" class="btn btn-primary">Añadir al carrito</button>
-                            </div>
-                        </div>
-                        <div class="card col-4 m-3" style="width: 18rem;">
-                            <img src="../img/tinda/samuraiStarted2.jpg" class="card-img-top img-fluid" loading="lazy" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <button type="button" class="btn btn-primary">Añadir al carrito</button>
-                            </div>
-                        </div>
-                        <div class="card col-4 m-3" style="width: 18rem;">
-                            <img src="../img/tinda/battlefield.jpg" class="card-img-top img-fluid" loading="lazy" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <button type="button" class="btn btn-primary">Añadir al carrito</button>
-                            </div>
-                        </div>
-                        <div class="card col-4 m-3" style="width: 18rem;">
-                            <img src="../img/tinda/Warhammer40kCoreBook.jpg" class="card-img-top img-fluid" loading="lazy" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                              <button type="button" class="btn boton">Añadir al carrito</button>
                             </div>
                         </div>
                     </div>

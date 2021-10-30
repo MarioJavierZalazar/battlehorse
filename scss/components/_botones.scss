@@ -1,0 +1,8 @@
+.boton {
+    background: rgba($color: $rojo, $alpha: 1);
+    color: $blanco;
+    &:hover {
+        background: rgba($color: $rojo, $alpha: 0.8);
+        color: $blanco;
+    }
+}
