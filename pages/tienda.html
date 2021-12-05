@@ -169,88 +169,22 @@
                     <section class="carrito mt-5">
                         <h3 class="subtitulo text-center">Carrito</h3>
                         <div class="card">
-                            <table class="table text-center">
+                            <table class="table text-center" id="tablaCarrito">
                                 <thead>
                                     <tr>
                                         <th scope="col">Productos</th>
                                         <th scope="col">Precio</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Started - Marines</td>
-                                        <td>$7.500</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Set de dados D6</td>
-                                        <td>$2.000</td>
-                                    </tr>
-                                </tbody>
-                                <tbody>
-                                    <tr>
-                                        <th>
-                                            Subtotal
-                                        </th>
-                                        <th>
-                                            $9.500
-                                        </th>
-                                    </tr>
-                                </tbody>
+                                <tbody id="listaProductos"></tbody>
                             </table>
                             <button type="button" class="btn boton m-3" id="comprar">Pagar compra</button>
                         </div>
                     </section>
                 </aside>
                 <section class="listaProductos col-12 col-md-9">
-                    <div class="row d-flex justify-content-around">
-                        <div class="card col-4 m-3" style="width: 18rem;">
-                            <img src="../img/tinda/sovieticosStarted2.jpg" class="card-img-top img-fluid" loading="lazy" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <button type="button" class="btn boton">Añadir al carrito</button>
-                            </div>
-                        </div>
-                        <div class="card col-4 m-3" style="width: 18rem;">
-                            <img src="../img/tinda/cadiaStarted2.jpg" class="card-img-top img-fluid" loading="lazy" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <button type="button" class="btn boton">Añadir al carrito</button>
-                            </div>
-                        </div>
-                        <div class="card col-4 m-3" style="width: 18rem;">
-                            <img src="../img/tinda/chaosStaretd2.jpg" class="card-img-top img-fluid" loading="lazy" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <button type="button" class="btn boton">Añadir al carrito</button>
-                            </div>
-                        </div>
-                        <div class="card col-4 m-3" style="width: 18rem;">
-                            <img src="../img/tinda/citadel.jpg" class="card-img-top img-fluid" loading="lazy" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <button type="button" class="btn boton">Añadir al carrito</button>
-                            </div>
-                        </div>
-                        <div class="card col-4 m-3" style="width: 18rem;">
-                            <img src="../img/tinda/darkAngelesStarted2.jpg" class="card-img-top img-fluid" loading="lazy" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <button type="button" class="btn boton">Añadir al carrito</button>
-                            </div>
-                        </div>
-                        <div class="card col-4 m-3" style="width: 18rem;">
-                            <img src="../img/tinda/nomuertosStarted.jpg" class="card-img-top img-fluid" loading="lazy" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <button type="button" class="btn boton">Añadir al carrito</button>
-                            </div>
-                        </div>
+                    <div class="row d-flex justify-content-around" id="listaDeProductos">
+                        <!-- Cargamos la lista de productos desde el JS -->
                     </div>
                 </section>
             </div>
@@ -263,6 +197,7 @@
         </div>
     </footer>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/listadeProductos.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html>
