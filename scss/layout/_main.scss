@@ -1,5 +1,9 @@
 /* MAIN */
 
+.mainContent{
+    max-width: 1800px;
+}
+
 .intro,
 .articulo {
     border-bottom: $border;
@@ -54,4 +58,10 @@
 
 textarea {
     resize: none;
+}
+
+/*Tienda*/
+
+.cantProducts {
+    width: 50%;
 }

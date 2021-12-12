@@ -1,70 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../img/Caballo.svg" type="image/x-icon">
-    <meta name="description" content="¿Estás buscando un army?  aquí, Battlehorse te ofrece algunos artículos que tiene en venta para iniciarte en cualquier wargames, o simplemente incrementar tu ejército.">
-    <meta name="keywords" content="Tienda, comprar miniaturas, start colection, mi primer ejercito, warhammer, warhammer 40k, kow, the walking dead, age of sigmar, bolt action, historicos, miniaturas de historicos">
+    <meta name="description"
+        content="¿Estás buscando un army?  aquí, Battlehorse te ofrece algunos artículos que tiene en venta para iniciarte en cualquier wargames, o simplemente incrementar tu ejército.">
+    <meta name="keywords"
+        content="Tienda, comprar miniaturas, start colection, mi primer ejercito, warhammer, warhammer 40k, kow, the walking dead, age of sigmar, bolt action, historicos, miniaturas de historicos">
     <script src="https://kit.fontawesome.com/215a6df78a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Battlehorse | Tienda</title>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header mb-5">
         <!-- Menu -->
-    <nav class="navbar navbar-expand-lg navbar-light px-5">
-        <div class="container-fluid">
-            <div class="navbar-brand">
-                <img class="logoImg" src="../img/logo-name.png" alt="Logo Battlehorse">
+        <nav class="navbar navbar-expand-lg navbar-light px-5">
+            <div class="container-fluid">
+                <div class="navbar-brand">
+                    <img class="logoImg" src="../img/logo-name.png" alt="Logo Battlehorse">
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="menuHamburgesa"><i class="fas fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link mx-1" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-1" href="./wargames.html">Wargames</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active mx-1" aria-current="page" href="./tienda.html">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-1" href="./tutoriales.html">Tutoriales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-1" href="./dondeJugar.html">Donde Jugar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="menuHamburgesa"><i class="fas fa-bars"></i></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link mx-1" href="../index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-1" href="./wargames.html">Wargames</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active mx-1" aria-current="page" href="./tienda.html">Tienda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-1" href="./tutoriales.html">Tutoriales</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-1" href="./dondeJugar.html">Donde Jugar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./contacto.html">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+        </nav>
     </header>
     <!-- Contenido Principal -->
     <main class="container mb-5">
         <div class="intro">
             <h1 class="titulo text-center">Tienda</h1>
-            <p class="lead texto">Aquí te ofrecemos algunos productos de diversas companias, ya sea para iniciar por primera vez, iniciar un nuevo ejercito o simplemente incrementar el que ya tienes. Además, podrás encontrar algunos elemenots de escenografias o herramientas para pintar o armar tus minis.</p>
+            <p class="lead texto">Aquí te ofrecemos algunos productos de diversas companias, ya sea para iniciar por
+                primera vez, iniciar un nuevo ejercito o simplemente incrementar el que ya tienes. Además, podrás
+                encontrar algunos elemenots de escenografias o herramientas para pintar o armar tus minis.</p>
         </div>
         <div class="productos container-fluid mt-5">
             <div class="row">
                 <aside class="filtros col-12 col-md-3">
+                    <section class="carrito text-center mt-5">
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn boton" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            <i class="fas fa-shopping-cart"></i>
+                             Mi carrito
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title subtitulo" id="exampleModalLabel">Mi carrito</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table class="table text-center" id="tablaCarrito">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Productos</th>
+                                                    <th scope="col">Cant</th>
+                                                    <th scope="col">Precio</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="listaProductos">
+                                                <tr><th colspan=3><spam class='subtitulo'>Su carrito esta vacio</spam></th></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer invisible" id="btnsCarrito">
+                                        <button type="button" class="btn botonSecundario" id="vaciarCarrito">Vaciar carrito</button>
+                                        <button type="button" class="btn boton">Finalizar compra</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                     <section class="filtrosContainer">
                         <h3 class="text-center subtitulo mt-5">Filtros</h3>
                         <nav class="nav flex-column">
-                            <button class="btn boton my-3" type="button" data-bs-toggle="collapse" data-bs-target="#filtro-orden" aria-expanded="false" aria-controls="filtro-orden">Ordenar por:</button>
+                            <button class="btn boton my-3" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#filtro-orden" aria-expanded="false"
+                                aria-controls="filtro-orden">Ordenar por:</button>
                             <div class="collapse" id="filtro-orden">
                                 <div class="card card-body">
                                     <ul class="nav flex-column">
@@ -86,10 +137,12 @@
                                                 <span>Nombre: A - Z</span>
                                             </label>
                                         </li>
-                                    </ul>  
+                                    </ul>
                                 </div>
                             </div>
-                            <button class="btn boton my-3" type="button" data-bs-toggle="collapse" data-bs-target="#filtro-marca" aria-expanded="false" aria-controls="filtro-marca">Marca</button>
+                            <button class="btn boton my-3" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#filtro-marca" aria-expanded="false"
+                                aria-controls="filtro-marca">Marca</button>
                             <div class="collapse" id="filtro-marca">
                                 <div class="card card-body">
                                     <ul class="nav flex-column">
@@ -111,10 +164,12 @@
                                                 <span>Mantic</span>
                                             </label>
                                         </li>
-                                    </ul>  
+                                    </ul>
                                 </div>
                             </div>
-                            <button class="btn boton my-3" type="button" data-bs-toggle="collapse" data-bs-target="#filtro-tipo" aria-expanded="false" aria-controls="filtro-tipo">Tipo</button>
+                            <button class="btn boton my-3" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#filtro-tipo" aria-expanded="false"
+                                aria-controls="filtro-tipo">Tipo</button>
                             <div class="collapse" id="filtro-tipo">
                                 <div class="card card-body">
                                     <ul class="nav flex-column">
@@ -136,50 +191,38 @@
                                                 <span>Escenografías</span>
                                             </label>
                                         </li>
-                                    </ul>  
+                                    </ul>
                                 </div>
                             </div>
-                            <button class="btn boton my-3" type="button" data-bs-toggle="collapse" data-bs-target="#filtro-precio" aria-expanded="false" aria-controls="filtro-precio">Rango de precio</button>
+                            <button class="btn boton my-3" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#filtro-precio" aria-expanded="false"
+                                aria-controls="filtro-precio">Rango de precio</button>
                             <div class="collapse" id="filtro-precio">
                                 <div class="card card-body">
                                     <ul class="nav flex-column">
                                         <li class="nav-item my-2">
                                             <label>
-                                                <input class="mx-1" type="checkbox" name="precio-m5k" id="precio-m5k">
-                                                <span>Menos de $5.000</span>
+                                                <input class="mx-1" type="checkbox" name="rangoPrecio" id="precio-m50" value="50">
+                                                <span>Menos de $50</span>
                                             </label>
                                         </li>
                                         <li class="nav-item my-2">
                                             <label>
-                                                <input class="mx-1" type="checkbox" name="precio-e5-10k" id="precio-e5-10k">
-                                                <span>Entre $5.000 y $10.000</span>
+                                                <input class="mx-1" type="checkbox" name="rangoPrecio"
+                                                    id="precio-e50-100" value="100">
+                                                <span>Entre $50 y $100</span>
                                             </label>
                                         </li>
                                         <li class="nav-item my-2">
                                             <label>
-                                                <input class="mx-1" type="checkbox" name="precio-m10k" id="precio-m10k">
-                                                <span>Más de $10.000</span>
+                                                <input class="mx-1" type="checkbox" name="rangoPrecio" id="precio-m100" value="99">
+                                                <span>Más de $100</span>
                                             </label>
                                         </li>
-                                    </ul>  
+                                    </ul>
                                 </div>
                             </div>
                         </nav>
-                    </section>
-                    <section class="carrito mt-5">
-                        <h3 class="subtitulo text-center">Carrito</h3>
-                        <div class="card">
-                            <table class="table text-center" id="tablaCarrito">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Productos</th>
-                                        <th scope="col">Precio</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="listaProductos"></tbody>
-                            </table>
-                            <button type="button" class="btn boton m-3" id="comprar">Pagar compra</button>
-                        </div>
                     </section>
                 </aside>
                 <section class="listaProductos col-12 col-md-9">
@@ -200,4 +243,5 @@
     <script src="../js/listadeProductos.js"></script>
     <script src="../js/main.js"></script>
 </body>
+
 </html>

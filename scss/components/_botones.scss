@@ -6,3 +6,11 @@
         color: $blanco;
     }
 }
+.botonSecundario {
+    background: rgba($color: $blanco, $alpha: 1);
+    color: $rojo;
+    &:hover {
+        background: rgba($color: $rojo, $alpha: 0.8);
+        color: $blanco;
+    }
+}

@@ -5,6 +5,13 @@
     background: rgba(139, 0, 0, 0.8);
     color: #f2f2f2; }
 
+.botonSecundario {
+  background: #f2f2f2;
+  color: #8b0000; }
+  .botonSecundario:hover {
+    background: rgba(139, 0, 0, 0.8);
+    color: #f2f2f2; }
+
 * {
   padding: 0;
   margin: 0;
@@ -70,6 +77,9 @@ body {
     color: #8b0000; }
 
 /* MAIN */
+.mainContent {
+  max-width: 1800px; }
+
 .intro,
 .articulo {
   border-bottom: 1px solid #8b0000; }
@@ -109,6 +119,10 @@ body {
 /* Contacto */
 textarea {
   resize: none; }
+
+/*Tienda*/
+.cantProducts {
+  width: 50%; }
 
 /* FOOTER */
 .footer {

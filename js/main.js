@@ -1,58 +1,89 @@
-//variables
+/* ----- variables ----- */
 let continueBuying;
 let subtotal = 0;
 let descCode;
 let tablaCarrito = document.getElementById('tablaCarrito');
 let tablaProductos = document.getElementById('listaProductos');
+let total = document.getElementById('tablaCarrito');
+let tbodyTotal = document.createElement('tbody');
+let addCarritos = document.getElementsByClassName('btnAddCarrito');
+let btnsCarrito = document.querySelectorAll('#btnsCarrito')[0];
+let rangoPrecio = document.getElementsByName('rangoPrecio');
 
-//arrays
-const productList = [];
-const cart = [];
+const fragment = document.createDocumentFragment();
+const vaciarCarrito = document.querySelectorAll('#vaciarCarrito')[0];
 
-//Fuciones
-const desc = (value) => {
-    total = subtotal
-    return total *= value;
-};
+/* ----- arrays ----- */
+const carrito = [];
+
+
+
+
+/* ----- Fuciones ----- */
+//Dibujamos el carrito de compras
+const buildCart = (cart) => {
+    tablaProductos.innerHTML = "";
+    for (const produtCart of cart) {
+        subtotal += produtCart.total;
+        let trLista = document.createElement('tr');
+        trLista.innerHTML = `<tr><td>${produtCart.name}</td><td><input type="number" class="form-control-sm cantProducts" id="${produtCart.name}${produtCart.id}" aria-describedby="cantidadDeProductos" value=${produtCart.cant}></td><td>$${produtCart.total}</td></tr>`;
+        fragment.appendChild(trLista);
+        tablaProductos.appendChild(fragment);
+
+        tbodyTotal.innerHTML = `<tr><th>Subtotal</th><th colspan =2 >$ ${subtotal}</th></tr>`;
+        total.appendChild(tbodyTotal);
+    }
+}
+
 const saveLocal = (key, value) => {
     localStorage.setItem(key, value)
 };
 
-//creando plantilla de lista de productos
-for (const product of products) {
-    product.priceIva();
-    productList.push(`ID: ${product.id} - ${product.name} $ ${product.price}`);
-}
 
-//Verificando si hay productos de manera local
+/* ----- Logica ----- */
+
+//cargamos la grilla de productos
+grillaDePorductos(products);
+
+//Verificando si hay productos de manera local y lo cargamos al carrito
 if ('cartList' in localStorage) {
-    const saveLocalProduct = JSON.parse(localStorage.getItem('cartList'));
-    console.log(saveLocalProduct)
-}
-
-
-
-do {
-    //El usuario selecciona el producto por ID
-    let productSelected = parseInt(prompt(`Ingrese el producto a comprar, indicando su ID\n${productList.join('\n')}`));
-    //validamos que el usuarios cargue un valor de ID valido y no un caracter
-    while (productSelected < 1 || productSelected > products.length || /\D/.test(productSelected)) {
-        productSelected = parseInt(prompt(`Ingreso un valor erroneo\nFavor de  seleccionar el producto a comprar, indicando su ID\n${productList.join('\n')}`));
+    let saveLocalProduct = JSON.parse(localStorage.getItem('cartList'));
+    for (saveProdcut of saveLocalProduct) {
+        carrito.push(new CartProduct(saveProdcut.id, saveProdcut.name, saveProdcut.price, saveProdcut.cant, saveProdcut.total));
+        btnsCarrito.classList.remove('invisible');
+        buildCart(carrito);
     }
-    cart.push((products.find(elemento => elemento.id === productSelected)));
-    //preguntamos si quiere continuar cargando
-    continueBuying = prompt('¿Desea agregar otro producto a su carrito?\nIndicar "Si" para cargar un nuevo producto o "No" para continuar con la compra').toLowerCase();
-} while (continueBuying != "no");
-
-let total = document.getElementById('tablaCarrito');
-
-for (const produtCart of cart) {
-    subtotal += produtCart.price;
-    let trLista = document.createElement('tr');
-    trLista.innerHTML = `<tr><td>${produtCart.name}</td><td>$${produtCart.price}</td></tr>`;
-    tablaProductos.appendChild(trLista);
 }
 
-let tbodyTotal = document.createElement('tbody');
-tbodyTotal.innerHTML = `<tr><th>Subtotal</th><th>$ ${subtotal}</th></tr>`;
-total.appendChild(tbodyTotal);
+//evento para cargar el carrito segun la seleccion de boton
+for (const btn of addCarritos) {
+    btn.addEventListener('click', () => {
+        btnsCarrito.classList.remove('invisible');
+        console.log(carrito);
+        let selected = products.find(product => product.id == btn.id);
+        if ((carrito.find(elemento => elemento.id == btn.id)) == undefined) {
+            carrito.push(new CartProduct(selected.id, selected.name, selected.price, 1, selected.price))
+        } else {
+            let found = (carrito.findIndex(elemento => elemento.id == btn.id));
+            carrito[found].cant += 1;
+            carrito[found].priceTotal();
+        }
+        buildCart(carrito);
+        saveLocal('cartList', JSON.stringify(carrito));
+    })
+}
+
+//Guardamos en memoria el contenido del carrito
+saveLocal('cartList', JSON.stringify(carrito));
+
+//Evento para vaciar el carrito
+vaciarCarrito.addEventListener('click', () => {
+    btnsCarrito.classList.add('invisible');
+    for (let i = 0; i < carrito.length; i++) {
+        carrito.pop();
+    }
+    tbodyTotal.innerHTML = `<tr><th colspan=3><spam class='subtitulo'>Su carrito esta vacio</spam></th></tr>`;
+    tablaProductos.innerHTML = "";
+    localStorage.removeItem('cartList');
+});
+
