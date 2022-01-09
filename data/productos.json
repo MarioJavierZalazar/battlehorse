@@ -1,0 +1,65 @@
+[
+    {
+        "id":"1",
+        "name": "Soviet Starter Army",
+        "price": "130",
+        "tag": ["marca-gw", "modelos"],
+        "picture": "../img/tinda/sovieticosStarted2.jpg"
+    },
+    {
+        "id":"2",
+        "name": "Astra Militarum",
+        "price": "90",
+        "tag": ["marca-gw", "modelos"],
+        "picture": "../img/tinda/cadiaStarted2.jpg"
+    },
+    {
+        "id":"3",
+        "name": "Chaos Space Marines",
+        "price": "95",
+        "tag": ["marca-gw", "modelos"],
+        "picture": "../img/tinda/chaosStaretd2.jpg"
+    },
+    {
+        "id":"4",
+        "name": "Necrons: Warriors + Paints Set",
+        "price": "30",
+        "tag": ["marca-gw", "modelos", "pintura"],
+        "picture": "../img/tinda/citadel.jpg"
+    },
+    {
+        "id":"5",
+        "name": "Stormcast Eternals Vindictors + Paints Set",
+        "price": "30",
+        "tag": ["marca-gw", "modelos","pintura"],
+        "picture": "../img/tinda/citadel2.jpg"
+    },
+    {
+        "id":"6",
+        "name": "Battlezone: Manufactorum Battlefield",
+        "price": "50",
+        "tag": ["marca-gw", "modelos"],
+        "picture": "../img/tinda/battlefield.jpg"
+    },
+    {
+        "id":"7",
+        "name": "The Walking Dead: All Out War",
+        "price": "65",
+        "tag": ["marca-gw", "modelos"],
+        "picture": "../img/tinda/thewalkingdeadStareted.jpeg"
+    },
+    {
+        "id":"8",
+        "name": "Ratkin Army",
+        "price": "90",
+        "tag": ["marca-gw", "modelos"],
+        "picture": "../img/tinda/ratkingStarted2.jpg"
+    },
+    {
+        "id":"9",
+        "name": "Rust, Stain & Streaking",
+        "price": "40",
+        "tag": ["marca-gw", "modelos"],
+        "picture": "../img/tinda/vallejoPinturas.jpg"
+    }
+]

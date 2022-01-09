@@ -66,27 +66,31 @@
                 primera vez, iniciar un nuevo ejercito o simplemente incrementar el que ya tienes. Además, podrás
                 encontrar algunos elemenots de escenografias o herramientas para pintar o armar tus minis.</p>
         </div>
+
+
         <div class="productos container-fluid mt-5">
             <div class="row">
                 <aside class="filtros col-12 col-md-3">
                     <section class="carrito text-center mt-5">
 
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn boton" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
+                        <button type="button" class="btn boton" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <i class="fas fa-shopping-cart"></i>
-                             Mi carrito
+                            Mi carrito
+                            <span id="badge" class="badge rounded-pill"></span>
                         </button>
 
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
+                            <div id="cartMensage2" style="display: none; position: fixed; top: 10px; right: 20px; z-index: 1;" class="alert mt-5" role="alert"></div>
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title subtitulo" id="exampleModalLabel">Mi carrito</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+                                            aria-label="Close">
+                                        </button>
                                     </div>
                                     <div class="modal-body">
                                         <table class="table text-center" id="tablaCarrito">
@@ -94,16 +98,23 @@
                                                 <tr>
                                                     <th scope="col">Productos</th>
                                                     <th scope="col">Cant</th>
-                                                    <th scope="col">Precio</th>
+                                                    <th scope="col" colspan=2>Precio</th>
                                                 </tr>
                                             </thead>
                                             <tbody id="listaProductos">
-                                                <tr><th colspan=3><spam class='subtitulo'>Su carrito esta vacio</spam></th></tr>
+                                                <tr>
+                                                    <th colspan=4>
+                                                        <spam class='subtitulo'>Su carrito esta vacio</spam>
+                                                    </th>
+                                                </tr>
+                                            </tbody>
+                                            <tbody id="totalProductos">
                                             </tbody>
                                         </table>
                                     </div>
                                     <div class="modal-footer invisible" id="btnsCarrito">
-                                        <button type="button" class="btn botonSecundario" id="vaciarCarrito">Vaciar carrito</button>
+                                        <button type="button" class="btn botonSecundario" id="vaciarCarrito">Vaciar
+                                            carrito</button>
                                         <button type="button" class="btn boton">Finalizar compra</button>
                                     </div>
                                 </div>
@@ -113,114 +124,38 @@
                     <section class="filtrosContainer">
                         <h3 class="text-center subtitulo mt-5">Filtros</h3>
                         <nav class="nav flex-column">
-                            <button class="btn boton my-3" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#filtro-orden" aria-expanded="false"
-                                aria-controls="filtro-orden">Ordenar por:</button>
-                            <div class="collapse" id="filtro-orden">
-                                <div class="card card-body">
+                            <div class="card card-body m-3">
+                                <h6 class="subtitulo text-center">Filtrar por precio</h4>
                                     <ul class="nav flex-column">
                                         <li class="nav-item my-2">
                                             <label>
-                                                <input class="mx-1" type="radio" name="filtro-orden" id="orden-mayor">
-                                                <span>Precio: Mayor a Menor</span>
+                                                <input class="mx-1" type="radio" name="rangoPrecio" id="precio-todo"
+                                                    value="0" checked>
+                                                <span>Todos los precios</span>
                                             </label>
                                         </li>
                                         <li class="nav-item my-2">
                                             <label>
-                                                <input class="mx-1" type="radio" name="filtro-orden" id="orden-menor">
-                                                <span>Precio: Menor a Mayor</span>
-                                            </label>
-                                        </li>
-                                        <li class="nav-item my-2">
-                                            <label>
-                                                <input class="mx-1" type="radio" name="filtro-orden" id="orden-nombre">
-                                                <span>Nombre: A - Z</span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <button class="btn boton my-3" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#filtro-marca" aria-expanded="false"
-                                aria-controls="filtro-marca">Marca</button>
-                            <div class="collapse" id="filtro-marca">
-                                <div class="card card-body">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item my-2">
-                                            <label>
-                                                <input class="mx-1" type="checkbox" name="marca-gw" id="marca-gw">
-                                                <span>Games Workshop</span>
-                                            </label>
-                                        </li>
-                                        <li class="nav-item my-2">
-                                            <label>
-                                                <input class="mx-1" type="checkbox" name="marca-wg" id="marca-wg">
-                                                <span>Warlord Games</span>
-                                            </label>
-                                        </li>
-                                        <li class="nav-item my-2">
-                                            <label>
-                                                <input class="mx-1" type="checkbox" name="marca-m" id="marca-m">
-                                                <span>Mantic</span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <button class="btn boton my-3" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#filtro-tipo" aria-expanded="false"
-                                aria-controls="filtro-tipo">Tipo</button>
-                            <div class="collapse" id="filtro-tipo">
-                                <div class="card card-body">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item my-2">
-                                            <label>
-                                                <input class="mx-1" type="checkbox" name="tipo-model" id="tipo-model">
-                                                <span>Modelos</span>
-                                            </label>
-                                        </li>
-                                        <li class="nav-item my-2">
-                                            <label>
-                                                <input class="mx-1" type="checkbox" name="tipo-pyh" id="tipo-pyh">
-                                                <span>Pintudas & Herramientas</span>
-                                            </label>
-                                        </li>
-                                        <li class="nav-item my-2">
-                                            <label>
-                                                <input class="mx-1" type="checkbox" name="tipo-escn" id="tipo-escn">
-                                                <span>Escenografías</span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <button class="btn boton my-3" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#filtro-precio" aria-expanded="false"
-                                aria-controls="filtro-precio">Rango de precio</button>
-                            <div class="collapse" id="filtro-precio">
-                                <div class="card card-body">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item my-2">
-                                            <label>
-                                                <input class="mx-1" type="checkbox" name="rangoPrecio" id="precio-m50" value="50">
+                                                <input class="mx-1" type="radio" name="rangoPrecio" id="precio-m50"
+                                                    value="50">
                                                 <span>Menos de $50</span>
                                             </label>
                                         </li>
                                         <li class="nav-item my-2">
                                             <label>
-                                                <input class="mx-1" type="checkbox" name="rangoPrecio"
-                                                    id="precio-e50-100" value="100">
+                                                <input class="mx-1" type="radio" name="rangoPrecio" id="precio-e50-100"
+                                                    value="100">
                                                 <span>Entre $50 y $100</span>
                                             </label>
                                         </li>
                                         <li class="nav-item my-2">
                                             <label>
-                                                <input class="mx-1" type="checkbox" name="rangoPrecio" id="precio-m100" value="99">
+                                                <input class="mx-1" type="radio" name="rangoPrecio" id="precio-m100"
+                                                    value="99">
                                                 <span>Más de $100</span>
                                             </label>
                                         </li>
                                     </ul>
-                                </div>
                             </div>
                         </nav>
                     </section>
@@ -239,8 +174,14 @@
             <p class="text-center">copyright © Mario Zalazar - 2021</p>
         </div>
     </footer>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/listadeProductos.js"></script>
+
+    <!-- Mensaje de producto cargado -->
+    <div id="cartMensage" style="display: none; position: fixed; top: 10px; right: 20px; z-index: 1;" class="alert mt-5" role="alert"></div>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/globales.js"></script>
+    <script src="../js/clases.js"></script>
+    <script src="../js/funciones.js"></script>
     <script src="../js/main.js"></script>
 </body>
 
