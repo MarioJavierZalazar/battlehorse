@@ -58,6 +58,8 @@ for (const elemento of $('input[name="rangoPrecio"]')){
 //Evento para vaciar el carrito
 $('#vaciarCarrito').on('click', vaciarCarrito);
 
+//Evneto para fionalizar compra
+$('#finalizarCompra').on('click', finalizarCompra)
 
 
 

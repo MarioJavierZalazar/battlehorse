@@ -90,13 +90,6 @@ const comprarProducto = (e) => {
 };
 
 
-// funcion para el change de los valores del carrito
-const cambioDeCantidad = (e) => {
-    console.log(e.target.value);
-}
-
-
-
 //vaciar el carrito
 const vaciarCarrito = () => {
     $('#btnsCarrito').addClass('invisible');
@@ -114,6 +107,21 @@ const vaciarCarrito = () => {
     localStorage.removeItem('cartList');
     subtotal = 0;
 }
+
+//Finalizar compra
+const finalizarCompra = () => {
+    if (carrito.length > 0){
+        $.post("https://jsonplaceholder.typicode.com/posts", JSON.stringify(carrito), function (respuesta, estado) {
+        if (estado == "success") {
+            $('#cartMensage').html('Su compra fue finalizada con exito').addClass('alert-success').fadeIn(200).delay(2500).fadeOut(600);
+            vaciarCarrito()
+        }
+      } );
+    } else {
+        
+    }
+};
+
 
 
 //Funcion para eliminar un producto del carrito

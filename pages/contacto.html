@@ -62,28 +62,32 @@
 
         </div>
         <!-- Formulario de contacto -->
-        <form action="#" method="POST" id="formContacto" class="my-5 container">
+        <form action="#" method="GET" id="formContacto" class="my-5 container">
             <div class="row">
                 <div class="col-12 d-md-flex justify-content-between">
                     <div class="mb-3 col-xs-12 col-md-5">
-                      <input type="text" class="form-control" name="nombre" placeholder="Nombre">
+                      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+                      <p class="mensajeError" id="mensajeErrorNombre">* Se debe cargar un nombre</p>
                     </div>
                     <div class="mb-3 col-xs-12 col-md-5">
-                      <input type="email" class="form-control" name="email" placeholder="Email">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                      <p class="mensajeError" id="mensajeErrorEmail">* Se debe cargar un email</p>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-4">
-                    <select class="form-select mb-3" aria-label="Default select example">
-                        <option selected>Seleccionar el motivo de contacto</option>
+                    <select class="form-select mb-3" aria-label="Default select example" id="motivo" name="motivo">
+                        <option selected value="null">Seleccionar el motivo de contacto</option>
                         <option value="consulta">Consulta</option>
                         <option value="tutorial">Tutorial</option>
                     </select>
+                    <p class="mensajeError" id="mensajeErrorMotivo">* Se debe seleccionar un motivo</p>
                 </div>
                 <div class="mb-3 col-12">
-                    <textarea class="form-control" name="descripcion" id="descripcion" cols="50" rows="10" placeholder="Mensaje"></textarea>
+                    <textarea class="form-control" name="mensaje" id="mensaje" cols="50" rows="10" placeholder="Mensaje"></textarea>
+                    <p class="mensajeError" id="mensajeErrorTexto">* Se debe cargar un mensaje</p>
                 </div>
                 <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn btn-primary col-4">Enviar</button>
+                    <button type="submit" id="enviar" class="btn btn-primary col-4">Enviar</button>
                 </div>
             </div>
           </form>
@@ -95,6 +99,12 @@
             <p class="text-center">copyright © Mario Zalazar - 2021</p>
         </div>
     </footer>
+
+    <!-- Mensajes -->
+    <div id="SendMensage" class="alert mt-5" role="alert"></div>
+
+
     <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <script src="../js/formulario/main.js"></script>
 </body>
 </html>

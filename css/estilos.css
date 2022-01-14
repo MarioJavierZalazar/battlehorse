@@ -26,6 +26,13 @@
   background-color: #8b0000;
   color: #f2f2f2; }
 
+.alert {
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  z-index: 1; }
+
 * {
   padding: 0;
   margin: 0;
@@ -133,6 +140,10 @@ body {
 /* Contacto */
 textarea {
   resize: none; }
+
+.mensajeError {
+  color: red;
+  display: none; }
 
 /*Tienda*/
 .cantProducts {
