@@ -54,7 +54,7 @@ const buildCart = (array) => {
 
 //cargando el total
 const totalCompra = () => {
-    $('#totalProductos').append(`<tr><th>Subtotal</th><th colspan =3 >$ ${subtotal}</th></tr>`);
+    $('#totalProductos').append(`<tr><th>Total</th><th colspan =3 >$ ${subtotal}</th></tr>`);
 };
 
 //Mostrar aviso de producto añadido al  carrito 
